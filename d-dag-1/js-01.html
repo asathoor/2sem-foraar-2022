@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .orange {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Begynder</h1>
+  <div id="resultat"></div>
+
+  <script>
+    /*
+      Prøver innerHTML
+      ver. 2.19 jan 2022
+    */
+
+    // jeg er en kommentar på en linje
+    document.getElementById('resultat').innerHTML = '<h2> Dante: "Inferno" </h2>';
+
+    // jeg kan gemme lange linjer i en variabel
+    let res = document.getElementById('resultat');
+    res.innerHTML += '<h2> Blake: "Songs of Innocence" </h2>';
+    res.style.color = 'red';
+    res.style.fontFamily = 'sans-serif';
+
+    // kan man sætte et billede ind, hvordan gør man det?
+    res.innerHTML += '<img src="images/spaceman.png" alt="Spaceman">';
+
+    // hvad nu hvis det skal være flere linjer
+    let kode = `
+      <aside class="orange">
+        <h1>Rummand</h1>
+        <img src="images/spaceman.png" alt="Spaceman" class="noget">
+        <figcaption>Bim bam bum</figcaption>
+      </aside>
+      `;
+
+
+    // res.innerHTML += kode;
+
+    // loop: gentages et antal gange
+    for (let i = 0; i<23; i++) {
+        res.innerHTML += kode;
+        res.innerHTML += "Rummand " + i;
+    }
+
+
+
+
+
+
+
+  </script>
+  <script src="js/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <button type="button" onclick="abe(111,4442)">Klik igå!</button>
+
+  <ul id="resultat"></ul>
+
+  <script>
+    /*
+    function abe() { // definerer en funktion
+      return 22 * 23;
+    }
+    */
+    console.log('Alert level green. Starship up and running.');
+
+    let tekst = document.getElementById('resultat');
+
+    function abe( tal1, tal2 ) { // definerer en funktion
+
+      console.log('Svar fra funktionen abe()');
+
+      // læg sammen
+      let plusser = tal1 + tal2;
+      tekst.innerHTML += '<li> Plus = ' +  plusser + '</li>';
+
+      // dividere
+      let dividerer = tal1 / tal2;
+      tekst.innerHTML += '<li> Divideret = ' +  dividerer + '</li>';
+
+      // lægge sammen
+      // trække fra
+    }
+
+    //abe(333,888);
+    //document.getElementById('resultat').innerHTML = abe(456,789);
+    //abe(); // afvikler, eksekvere, udfører
+  </script>
+</body>
+</html>

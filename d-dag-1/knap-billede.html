@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button
+    type="button"
+    onclick="visBillede()">
+      Klik igå!</button>
+
+      <button
+        type="button"
+        onclick="sletBillede()">
+          Slet den dær!</button>
+
+    <div id="billedeHer"></div>
+
+      <script>
+        function visBillede(){
+          console.log('visBillede() kører')
+
+          let kode = `
+            <aside class="orange">
+              <h1>Rummand</h1>
+              <img src="images/spaceman.png" alt="Spaceman" class="noget">
+              <figcaption>Spock! Where are you ...</figcaption>
+            </aside>
+            `;
+
+          document.getElementById('billedeHer').innerHTML = kode;
+        }
+
+        // og en funktion der sletter et billede
+        function sletBillede() {
+          console.log('sletter billedet')
+          document.getElementById('billedeHer').innerHTML = '';
+        }
+
+      </script>
+</body>
+</html>
