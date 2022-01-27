@@ -9,6 +9,7 @@
     #kast {
       font-size: 111px;
       color: violet;
+      height: 200px;
     }
     body {
       text-align: center;
@@ -18,9 +19,9 @@
 <body>
   <div id="kast"></div>
   <button type="button" name="button" onclick="Caecar.iacta()">Kast terninger!</button>
+  <button type="button" name="button" onclick="Caecar.fjernTerninger()">Fjern terninger</button>
 
   <script>
-
     // Objektet Caecar kan kaste terningerne. Her to stk.
     let Caecar = {
       alea: [ // properties, as an array
@@ -30,18 +31,20 @@
         '⚃',
         '⚄',
         '⚅'
-      ],
+      ], // METHODS
       iacta: function() { // method: display random dices
 
         kast.innerHTML = ''; // clear the div
 
-        for (let i=0;i<2;i++) { // loop: add dices to the div
+        for ( let i=0; i<3; i++ ) { // loop: add dices to the div
           kast.innerHTML += this.alea[ Math.floor((Math.random() * 6))];
         }
+      },
+      fjernTerninger: function(){
+        kast.innerHTML = ''; // clear the div
       }
     }
 
-    Caecar.iacta();
   </script>
 </body>
 </html>
