@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,19 @@
   <link rel="stylesheet" href="css/style.css">
   <title>JavaScript Boilerplate</title>
 </head>
-<body>
-  <div style="text-align:center">
-   <!-- buttons -->
-    <button onclick="playPause()">Play/Pause</button>
-    <button onclick="makeBig()">Big</button>
-    <button onclick="makeSmall()">Small</button>
-    <button onclick="makeNormal()">Normal</button><br>
 
-    <!-- a more elegant solution is: -->
-    <button id="shutup">Sound off</button>
+<body>
+  <div class="wrap">
+    <div class="btns">
+      <!-- buttons -->
+      <button onclick="playPause()">Play/Pause</button>
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+
+      <!-- a more elegant solution is: -->
+      <button id="shutup">Sound off</button>
+    </div>
 
     <!-- content -->
     <video id="myVideo" width="600">
@@ -28,8 +32,9 @@
     <p>Parade: Edinburgh, summer of 2015</p>
     <h2>Video Options</h2>
     <p>See <a href="https://www.w3schools.com/jsref/dom_obj_video.asp">this W3 Schools page</a>.</p>
-    </div>
+  </div>
   <!-- scripts -->
   <script src="js/js.js"></script>
 </body>
+
 </html>

@@ -4,9 +4,10 @@
  * inspration from: https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_video_js_prop
  **/
 var myVideo = document.getElementById("myVideo");
+
 // preload
 myVideo.width = 420;
-myVideo.controls = true;
+myVideo.controls = false; // or true
 
 // the ON / OFF trick
 function playPause() {
