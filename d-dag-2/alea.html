@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +12,25 @@
       color: violet;
       height: 200px;
     }
+
     body {
       text-align: center;
     }
   </style>
 </head>
+
 <body>
+  <!-- Herunder: terninger kommer frem her -->
   <div id="kast"></div>
+
+  <!-- Events: klik -->
   <button type="button" name="button" onclick="Caecar.iacta()">Kast terninger!</button>
   <button type="button" name="button" onclick="Caecar.fjernTerninger()">Fjern terninger</button>
 
   <script>
     // Objektet Caecar kan kaste terningerne. Her to stk.
     let Caecar = {
-      alea: [ // properties, as an array
+      alea: [ // PROPERTIES
         '⚀', // unicode: die-1
         '⚁',
         '⚂',
@@ -36,15 +42,14 @@
 
         kast.innerHTML = ''; // clear the div
 
-        for ( let i=0; i<3; i++ ) { // loop: add dices to the div
-          kast.innerHTML += this.alea[ Math.floor((Math.random() * 6))];
+        for (let i = 0; i < 3; i++) { // loop: add dices to the div
+          kast.innerHTML += this.alea[Math.floor((Math.random() * 6))];
         }
       },
-      fjernTerninger: function(){
+      fjernTerninger: function() {
         kast.innerHTML = ''; // clear the div
       }
     }
-
   </script>
 </body>
 </html>
