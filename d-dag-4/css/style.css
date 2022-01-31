@@ -1,0 +1,40 @@
+/* The animation code */
+@keyframes colorflow {
+  0%   {
+    background-color: red;
+    left: 25%;
+  }
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {
+    background-color: green;
+    transform: rotate(180deg);
+    left: 80%;
+  }
+}
+
+/* The element to apply the animation to */
+.animated {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: colorflow;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#herSkerDet {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+}
+
+.green {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  background-color: green;
+}
