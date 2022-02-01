@@ -5,7 +5,7 @@
       Dette er IKKE MDU-pensum -->
 <?php
 // the message
-$msg = "Email fra " . $_GET['Name'] . " Email: " . $_GET['Name'];
+$msg = "Email fra " . $_POST['Name'] . " Email: " . $_POST['Name'];
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
