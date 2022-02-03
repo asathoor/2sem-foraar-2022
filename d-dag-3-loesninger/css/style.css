@@ -1,0 +1,76 @@
+/**
+ Alice's Restaurant Aarhus
+ Stylesheet v. petj
+ **/
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Libre+Franklin:ital,wght@0,100;0,200;1,100&family=Roboto:wght@500&display=swap');
+
+:root {
+  /* color picker: https://duckduckgo.com/?q=color+picker&atb=v1-1&ia=answer */
+  --groen: #7ec962;
+  --blaa: #627ec9;
+  --tegl: #c9627e;
+  --sort: #000;
+  --hvid: #fff;
+  /* typografisk */
+  --font-a: 'Fruktur', cursive;
+  --font-b: 'Libre Franklin', sans-serif;
+  --font-c: 'Roboto', sans-serif;
+  /* whitespace */
+  --whitesp: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-b);
+  font-weight: bold;
+}
+
+p,
+div {
+  font-family: var(--font-c);
+}
+
+/* flex */
+.flex {
+  display: flex;
+}
+
+/* center */
+.center {
+  text-align: center;
+}
+
+body {
+  font-family: var(--font-c);
+}
+
+
+
+
+header,
+footer {
+  background-color: var(--groen);
+  text-align: center;
+  min-height: 45px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* resp. images */
+img {
+  max-width: 100%;
+}
+
+.resp-img {
+  width: 100%;
+}

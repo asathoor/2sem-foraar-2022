@@ -1,0 +1,54 @@
+  <!DOCTYPE html>
+  <html lang="da">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .videre {
+        padding: 5px;
+        background-color: silver;
+        width: 75px;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Form</h1>
+
+    <h2>McGrath p. 152</h2>
+
+    <form id="contact" action="action.php" method="post">
+
+      <fieldset id="f1">
+        <legend>Skriv navn og email</legend>
+        Navn <input type="text" name="Name" value=""><br>
+        Email <input type="email" value="">
+
+        <div id="btn1" class="videre">Næste</div>
+      </fieldset>
+
+      <fieldset id="f2">
+        <legend>Vælg mellem disse muligheder ...</legend>
+        <!-- valgmuligheder her -->
+        <!-- valgmuligheder her -->
+        <!-- valgmuligheder her -->
+
+        <div id="btn2" class="videre">Næste</div>
+      </fieldset>
+      
+      <fieldset id="f2">
+        <H2>Sådan - nu kan du maile denne form</H2>
+
+        <!-- submit-knappen sender formens indhold til serveren -->
+        <input type="submit">
+      </fieldset>
+    </form>
+
+  </body>
+
+  </html>

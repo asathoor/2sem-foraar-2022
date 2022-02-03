@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alea</title>
+  <style>
+    #kast {
+      font-size: 111px;
+      color: violet;
+      height: 200px;
+    }
+
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Herunder: terninger kommer frem her -->
+  <div id="kast"></div>
+
+  <!-- Events: klik -->
+  <button type="button" name="button" onclick="Caecar.iacta()">Kast terninger!</button>
+  <button type="button" name="button" onclick="Caecar.fjernTerninger()">Fjern terninger</button>
+
+  <script>
+    // Objektet Caecar kan kaste terningerne
+    let Caecar = {
+      alea: [ // PROPERTIES
+        '⚀', // unicode: die-1
+        '⚁',
+        '⚂',
+        '⚃',
+        '⚄',
+        '⚅'
+      ], // METHODS
+      iacta: function() { // method: display random dices
+
+        kast.innerHTML = ''; // clear the div
+
+        for (let i = 0; i < 3; i++) { // loop: add dices to the div
+          kast.innerHTML += this.alea[Math.floor((Math.random() * 6))];
+        }
+      },
+      fjernTerninger: function() {
+        kast.innerHTML = ''; // clear the div
+      }
+    }
+  </script>
+</body>
+</html>

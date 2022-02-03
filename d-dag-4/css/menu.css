@@ -1,0 +1,35 @@
+/**
+* menu.css
+* Dropdown
+**/
+nav {
+  display: flex;
+}
+
+#showBrg {
+  display:none;
+}
+
+#burger {
+  font-size: 6rem;
+}
+
+li {
+  list-style: none;
+  font-size: large;
+  padding: 2rem;
+}
+
+li:nth-child(odd) {
+  background: #f7c8d9;
+}
+
+li:nth-child(even) {
+  background: #d9f7c8;
+}
+
+#largeDev {
+  display: none;
+}
+
+/* responsive */

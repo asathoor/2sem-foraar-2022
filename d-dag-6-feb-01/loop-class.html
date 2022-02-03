@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .roed {
+      width: 202px;
+      background-color: lime;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Test: loop add eventlistener to class members</h1>
+
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+  <div class="roed">Lorem ipsum dolor sit amet.</div>
+
+  <script>
+    const navLinks = document.querySelectorAll('.roed');
+
+    for (var link of navLinks) {
+      link.addEventListener('click', function(event) {
+      alert('Klik her');
+      event.preventDefault(); // !important
+      });
+    }
+  </script>
+</body>
+
+</html>

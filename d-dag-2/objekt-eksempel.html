@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <h1>Hotellet</h1>
+
+    <section>
+      <h2>huskeseddel</h2>
+      <div id="husk"></div>
+    </section>
+
+    <div id="dies"></div>
+
+  <script>
+    let visMig,huskeseddel = [
+      "Mælk",
+      "Øl",
+      "Gær",
+      "Mel",
+      "Smør",
+      "Sønderjysk rugbrød",
+      "Marmelade",
+      "Hugo, Victor: 'Klokkeren fra Notredame'",
+      "Joyce, James: 'Dublin Stories'",
+      "Yates, W.B.: 'The Wild Swans at Coole'"
+    ]
+
+    huskeseddel.sort();
+
+    for (visMig in huskeseddel) {
+      //console.log( huskeseddel[ visMig ] );
+      //husk.innerHTML += '<li>' + huskeseddel[ visMig ] + '</li>';
+      husk.innerHTML += `
+        <div class="ogDenHer">
+          ${ huskeseddel[ visMig ] }
+        </div>
+      `
+    }
+
+    const etTal = 42;
+
+    // dato-obj
+    const d = new Date();
+
+    const uge = [
+    'Søndag',
+      'Mandag',
+      'Tirsdag',
+      'Onsdag',
+      'Torsdag',
+      'Fredag',
+      'Lørdag'
+    ]
+
+    // skriver til <div id="dies">
+    dies.innerHTML = uge[ d.getDay() ];
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
