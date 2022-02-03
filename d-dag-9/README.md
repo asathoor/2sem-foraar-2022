@@ -41,14 +41,14 @@ const obj = JSON.parse('{"name":"John", "lastName":"Deer"}');
 
 Herefter vil obj opføre sig som et JavaScript objekt.
 
-## Fetch()
+## Fetch() teoretisk
 
 Med fetch() kan du hente JSON fra en server online.
 
 ~~~~
 let file = "https://myServer/myFile.json";
 
-fetch (file)
+fetch ( file )
 .then(x => x.text())
 .then(y => document.getElementById("demo").innerHTML = y);
 ~~~~
@@ -57,7 +57,7 @@ Hvis filen indeholder tekst, kan den vises sådan; men hvis der er tale om JSON-
 
 ## Fetch() i praksis
 
-Fetch virker kun på en server. Derfor skal du uploade filerne til din webserver eller arbejde på en lokal server (fx Mamp, Xampp).
+Fetch virker kun når filerne ligger sammen på en server. Derfor skal du uploade filerne til din webserver eller arbejde på en lokal server (fx kan du bruge [Mamp](https://www.mamp.info/en/windows/), [Xampp](https://www.apachefriends.org/download.html) eller installere en Apache-server på [Linux](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview) ).
 
 ### Filen med JSON-data
 
