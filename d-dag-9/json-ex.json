@@ -1,0 +1,6 @@
+{
+"name"    : "John",
+"age"     : 30,
+"models"  : ["One", "Twhoo", "Fhire"],
+"colors"  : ["green", "blue", "#ffcc23"]
+}

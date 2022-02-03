@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>JSON intro</h1>
+  <div id="tekst"></div>
+
+  <script>
+    /*
+    const obj = JSON.parse('{"name":"John", "lastName":"Deer", "age": 23}');
+    console.log(obj);
+    */
+
+    const myJson = "json-ex.json"
+
+    fetch(myJson)
+      .then(response => {
+         return response.json();
+      })
+      .then(data => console.log(data));
+
+  </script>
+</body>
+
+</html>
