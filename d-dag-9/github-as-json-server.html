@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Use Github as a JSON server</title>
+</head>
+
+<body>
+
+  <h1> Use Github as Your JSON-server </h1>
+
+  <p>Here Github is an easy to use alternative if your webhost does not allow access to json files from external sources.</p>
+
+  <div id="result"></div>
+
+  <script>
+    // Case: json sharing is not allowed on my web host ...
+    // let sample = "https://multimusen.dk/json/json-ex.json";
+    // alternative: use Github as a server:
+    let onGithub = "https://raw.githubusercontent.com/asathoor/2sem-foraar-2022/main/d-dag-9/json-ex.json"; // NB: use the url to the data in the raw format
+
+    // now fetch the data as in McGraw "JavaScript in Easy Steps" p. 160
+    fetch( onGithub )
+    .then( response => response.json() )
+    .then( data => console.log(data) )
+    .catch( err => console.log(err) )
+    // Q.E.D.
+  </script>
+</body>
+
+</html>

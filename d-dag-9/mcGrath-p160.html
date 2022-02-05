@@ -9,29 +9,31 @@
 </head>
 
 <body>
-  <h1>JSON intro</h1>
+  <h1>JSON: McGrath p. 160</h1>
   <div id="tekst"></div>
 
   <script>
+    // run this code on a server
+
     const myJson = "json-ex.json"
-    /* Denne kode virker kun på en server */
+
+    // Filen som hentes skal ligge på samme server!
+    // const myJson = "https://multimusen.dk/json/json-ex.json";
+
     fetch(myJson)
       .then(response => {
         return response.json();
       })
-      .then(data => list(data))
-    })
-    .catch(err => console.log(err));
+      .then(data => list(data));
 
     function list(data) {
-      const values = Object.values(data);
-      let i = 0;
-      while (i < values.length) {
-        tekst.innerHTML += values[i];
-        i++;
+      console.log(data.models); // test
+
+      // array: models
+      for (i=0; i<data.models.length; i++){
+        tekst.innerHTML += data.models[i] + '<br>';
       }
     }
   </script>
 </body>
-
 </html>

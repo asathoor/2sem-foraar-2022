@@ -73,6 +73,8 @@ Fetch virker kun når filerne ligger sammen på en server. Derfor skal du upload
 
 ### Fetch() data
 
+**Vigtigt:** Filerne skal ligge på samme server. Fetch() skal afvikles på en webserver.
+
 ~~~~
 const myJson = "json-ex.json"
 
