@@ -5,25 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Intro til json</title>
+  <style>
+    .menuTing {
+      color: blue;
+    }
+
+  </style>
 </head>
 <body>
-
   <h1>Json intro</h1>
+  <h2>Menu</h2>
   <div id="resultat"></div>
 
   <script>
-    let hermes = '{"name":"Hermes", "age":30, "car":null}';
+
+    //let hermes = '{"name":"Hermes", "age":30, "car":null}';
     //console.log(hermes)
-    const obj = JSON.parse(hermes);
-    console.log(obj)
-        console.log( "Her er navnet: " + obj.name )
+    //const obj = JSON.parse(hermes);
+    //console.log(obj)
+      //  console.log( "Her er navnet: " + obj.name )
 
 
-    const myObj = {name:"John", age:30, city:"New York"};
-    document.getElementById("resultat").innerHTML = myObj.age;
-    console.log(myObj)
+    //const myObj = {name:"John", age:30, city:"New York"};
+    //document.getElementById("resultat").innerHTML = myObj.age;
+    //console.log(myObj)
 
     // nu skal vi bruge vores JSON
+    // jajljlf
     menu = `{
       "menu": [
         {
@@ -60,7 +68,7 @@
         },
         {
           "id": 5,
-          "titel": "Creme brûle",
+          "titel": "Crème brûlée",
           "beskrivelse": "Hjemmelavet",
           "pris": 67,
           "ret": "dessert",
@@ -80,7 +88,7 @@
           "beskrivelse": "Bagt for 20 min. siden",
           "pris": 200,
           "ret": "tilbehør",
-          "foto": "broed.jpg"
+          "foto": "broed.png"
         }
       ]
     }`;
@@ -90,17 +98,19 @@
 
   // loop der henter hele arrayet
   for (let i=0; i<xxx.menu.length; i++){
-    console.log( xxx.menu[i].titel )
+
+
+    if( xxx.menu[i].ret == 'dessert' ){
+
+    // console.log( xxx.menu[i].titel )
     resultat.innerHTML += `
-      <div class="menuTing">
+      <div class="menuTing flex" style="font-family: sans-serif;">
         <h2> ${xxx.menu[i].titel} </h2>
         <p> ${xxx.menu[i].beskrivelse} </p>
-          <img src="images/${xxx.menu[i].foto}" alt="${xxx.menu[i].titel}">
-        // fortsæt selv med: billeder
+        <p> ${xxx.menu[i].pris} kr. </p>
       </div>
     `
-
-
+    }
   }
 
 
