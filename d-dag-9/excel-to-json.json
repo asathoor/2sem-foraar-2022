@@ -1,0 +1,60 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "titel": "Gullash",
+      "beskrivelse": "Kød og kartofler",
+      "pris": 123,
+      "ret": "hovedret",
+      "foto": "gullash.jpg"
+    },
+    {
+      "id": 2,
+      "titel": "Bibimbab",
+      "beskrivelse": "Nudler, grønt, spejlæg",
+      "pris": 234,
+      "ret": "hovedret",
+      "foto": "bibim.jpg"
+    },
+    {
+      "id": 3,
+      "titel": "Kyllingesticks",
+      "beskrivelse": "Kylling, grønt",
+      "pris": 345,
+      "ret": "forret",
+      "foto": "kyll.jpg"
+    },
+    {
+      "id": 4,
+      "titel": "Dagens veganske suppe",
+      "beskrivelse": "Direkte fra haven",
+      "pris": 111,
+      "ret": "forret",
+      "foto": "suppe.jpg"
+    },
+    {
+      "id": 5,
+      "titel": "Creme brûle",
+      "beskrivelse": "Hjemmelavet",
+      "pris": 67,
+      "ret": "dessert",
+      "foto": "cb.jpg"
+    },
+    {
+      "id": 6,
+      "titel": "Æblekage",
+      "beskrivelse": "Oldes opskrift",
+      "pris": 56,
+      "ret": "dessert",
+      "foto": "efelkaach.jpg"
+    },
+    {
+      "id": 7,
+      "titel": "Brød",
+      "beskrivelse": "Bagt for 20 min. siden",
+      "pris": 200,
+      "ret": "tilbehør",
+      "foto": "broed.jpg"
+    }
+  ]
+}
