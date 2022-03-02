@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form action</title>
+</head>
+
+<body>
+  <h1>Bestilling</h1>
+  <div id="visDet"></div>
+
+  <script>
+    // vide: https://www.w3docs.com/snippets/javascript/how-to-get-url-parameters.html
+    const queryString = window.location.search;
+    console.log(queryString);
+
+    // parse parameters
+    let urlParams = new URLSearchParams(queryString);
+    console.log(urlParams)
+
+    // vis det på siden
+    visDet.innerHTML = `
+      <p>En ${urlParams.get('duff')}
+        til ${urlParams.get('bord')}</p>
+        `
+  </script>
+</body>
+
+</html>
