@@ -1,0 +1,72 @@
+/**
+* file: style.css
+**/
+:root {
+  /* colors */
+  --lapiz: #3434ba;
+  --ruby: #ba3434;
+  --emerald: #34ba34;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+#wrap {
+  width: 90%;
+  margin: auto;
+}
+
+header, footer {
+  background-color: var(--lapiz);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+main > * {
+  padding: 23px;
+}
+
+#carte {
+  background-color: var(--ruby);
+  width: 60%;
+}
+
+#orders {
+  background-color: var(--emerald);
+  width: 33%;
+}
+
+.aDish {
+  padding: 7px;
+  border-bottom: 1px dotted #fff;
+}
+
+#bill {
+  display: flex;
+}
+
+button {
+  background-color: var(--lapiz);
+  color: #fff;
+  margin-left:  .5rem;
+  margin-right:  .5rem;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* for thanx.html */
+.emerald {
+  background-color: var(--emerald);
+}
