@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prøv session storage</title>
+  <style>
+    section {
+      display: flex;
+    }
+    #seHer {
+      background-color: lime;
+      min-width: 50%;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <section>
+
+<button id="knap">Irish Stew</button>
+  <div id="seHer"></div>
+
+</section>
+  <script>
+    const a = "Irish Stew"
+
+    // Session: lever så længe browseren er åben
+    // her gemmer vi
+    sessionStorage.setItem("test", a)
+
+    // her henter vi det gemte frem igen
+
+
+    // eventListener
+    knap.addEventListener('click', function(){
+      //alert('Av!')
+      seHer.innerHTML += sessionStorage.getItem("test") + "<br>"
+    })
+
+  </script>
+</body>
+</html>
