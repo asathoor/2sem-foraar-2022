@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form</title>
+  <style>
+  body {
+    background-color: #70e0ef;
+  }
+  .flex {
+    display: flex;
+  }
+  </style>
+</head>
+
+<body>
+
+  <h1>Drikkevarer</h1>
+
+  <form action="form-action.html" id="cheers">
+    <label for="">Bord</label> <input type="text" name="bord" id="bord">
+
+    <div>
+      <input type="radio" id="age1" name="duff" value="Lille fad">
+      <label for="age1">Lille fadøl</label><br>
+      <input type="radio" id="age2" name="duff" value="Stor fad">
+      <label for="age2">Stor fadøl</label><br>
+      <input type="radio" id="age3" name="duff" value="Støvle">
+      <label for="age3">Støvle med fadøl</label><br>
+    </div>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    // save value for later use
+    bord.addEventListener('input', function() {
+      console.log(bord.value)
+      localStorage.setItem("bord", bord.value)
+    })
+
+    // Radio buttons: kan gemmes når de ændres
+    age1.addEventListener('change', function() {
+      localStorage.setItem("radio", 1)
+    })
+
+    age2.addEventListener('change', function() {
+      localStorage.setItem("radio", 2)
+    })
+
+    age3.addEventListener('change', function() {
+      localStorage.setItem("radio", 3)
+    })
+
+    // ved window load hentes værdierne frem
+    window.addEventListener('load', function() {
+
+      // ved load: prøv om der er gemt noget i localStorage
+      try {
+        bord.value = localStorage.getItem("bord")
+      } catch {
+        console.log("localStorage.getItem('bord') : er ikke defineret endnu.")
+      }
+
+      // sætter radio button.checked
+      if (localStorage.getItem("radio") === "1") {
+        age1.checked = true
+      }
+
+      if (localStorage.getItem("radio") === "2") {
+        age2.checked = true
+      }
+
+      if (localStorage.getItem("radio") === "3") {
+        age3.checked = true
+      }
+
+    })
+  </script>
+</body>
+
+</html>
