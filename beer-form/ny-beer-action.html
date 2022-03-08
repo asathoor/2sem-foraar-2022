@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ny beer action</title>
+</head>
+<body>
+  <h1>Velbekomme!</h1>
+  <div id="visDet"></div>
+<p>
+  ?bord=Legolas
+  &duff=St%C3%B8vle
+</p>
+
+<script>
+  // henter data fra querystringen
+  const queryString = window.location.search;
+  console.log(queryString);
+
+  // parse parametre
+  let urlParams = new URLSearchParams(queryString);
+  console.log(urlParams)
+
+  // vis det på siden - husk backticks
+  visDet.innerHTML = `
+    <h2>Ny bestilling</h2>
+    <p>En ${urlParams.get('duff')}
+      til ${urlParams.get('bord')}</p>
+      `
+</script>
+
+</body>
+</html>

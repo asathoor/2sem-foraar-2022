@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Beer Order</title>
+</head>
+<body>
+  <h1>Beer Order</h1>
+
+  <form action="ny-beer-action.html" id="cheers">
+    <label for="">Bord</label>
+      <input type="text" name="bord" id="bord">
+
+    <div>
+      <input type="radio" id="age1" name="duff" value="Lille fad">
+      <label for="age1">Lille fadøl</label><br>
+
+      <input type="radio" id="age2" name="duff" value="Stor fad">
+      <label for="age2">Stor fadøl</label><br>
+
+      <input type="radio" id="age3" name="duff" value="Støvle">
+      <label for="age3">Støvle med fadøl</label><br>
+
+      <input type="radio" id="age4" name="duff" value="Tårn">
+      <label for="age4">Tårn</label><br>
+    </div>
+
+    <button type="submit">Send</button>
+  </form>
+
+<script>
+  // save value for later use
+  bord.addEventListener('input', function() {
+    console.log(bord.value)
+    localStorage.setItem("bord", bord.value)
+  })
+
+  // load event, når siden indlæses
+  window.addEventListener('load', function() {
+    bord.value = localStorage.getItem("bord")
+
+
+    // sætter radio button.checked
+    if (localStorage.getItem("radio") === "1") {
+      age1.checked = true
+    }
+
+    if (localStorage.getItem("radio") === "2") {
+      age2.checked = true
+    }
+
+    if (localStorage.getItem("radio") === "3") {
+      age3.checked = true
+    }
+
+    if (localStorage.getItem("radio") === "4") {
+      age4.checked = true
+    }
+    
+  })
+
+  // Radio Buttons
+  // Radio buttons: kan gemmes når de ændres
+  age1.addEventListener('change', function() {
+    localStorage.setItem("radio", 1)
+  })
+
+  age2.addEventListener('change', function() {
+    localStorage.setItem("radio", 2)
+  })
+
+  age3.addEventListener('change', function() {
+    localStorage.setItem("radio", 3)
+  })
+
+  age4.addEventListener('change', function() {
+    localStorage.setItem("radio", 4)
+  })
+</script>
+
+</body>
+</html>
