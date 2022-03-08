@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <title>Weather: Here and now</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Openweathermap Eksempel</h1>
+
+    <!-- herunder: vejret -->
+    <div id="result"></div>
+
+<script>
+
+/*
+@datasæt hentes sådan:
+
+http://api.openweathermap.org/data/2.5/weather?
+q=Aarhus
+&lang=da
+&units=metric
+&appid=201d090c9cceacfc8931df89310ebfbb
+*/
+
+$(document).ready(function() {
+
+    // get the weather data via query URI
+    fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=79dae5576f9b00d2e57efecb7798550a").then(response => {
+        return response.json();
+    }).then(data => {
+
+        // Work with JSON data here
+        console.log(data); // show what's in the json
+
+        // solnedgang
+        /*
+        var sunsetMs = data.sys.sunset * 1000; // dato-objektet har brug for millisek. Derfor * 1000
+        var sunset = new Date(sunsetMs);
+        */
+
+        // Datoformattering @URI < https://www.w3schools.com/js/js_date_methods.asp >
+        /*
+        var sunsetTime = sunset.getHours() + ":" + sunset.getMinutes();
+        */
+
+        /*
+        --> Prøv selv:
+        --> Tilføj oplysninger om solopgang.
+        */
+
+        /*
+        result.innerHTML = `
+          <div class="weatherInfo">
+            <h1> ${data.name} </h1>
+            <h2> ${data.weather[0].description} </h2>
+          </div>
+        `*/
+            /*
+            // tilføjer vejrsymbol
+            '<figure>' +
+            '<img src="images/' + data.weather[0].icon + '.png" alt="Vejrsymbol">' +
+            '</figure>' +
+
+            // tilføjer klokkeslet for solens nedgang i vest
+            '<p> Solnedgang: ' + sunsetTime + '</p>' +
+
+            // afslutter #weatherInfo taggen
+            '</div>'); // .append til #result slut
+            */
+
+        // here are the icons: https://openweathermap.org/weather-conditions
+
+    }).catch(err => {
+        // Do something for an error here
+        console.log('There was an error: ' + err);
+    });
+
+}); // document ready end
+</script>
+
+</body></html>
