@@ -51,7 +51,7 @@ q=Aarhus
 $(document).ready(function() {
 
     // get the weather data via query URI
-    fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=YOUR-API-KEY-HERE").then(response => {
+    fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=94df7f9ff51ea5f99470094fe37eeb0e").then(response => {
         return response.json();
     }).then(data => {
 
@@ -64,11 +64,6 @@ $(document).ready(function() {
 
         // Datoformattering @URI < https://www.w3schools.com/js/js_date_methods.asp >
         var sunsetTime = sunset.getHours() + ":" + sunset.getMinutes();
-
-        /*
-        --> Prøv selv:
-        --> Tilføj oplysninger om solopgang.
-        */
 
         // append = da. tilføj (noget tilføjes et element med id="result"
         $('#result').append(
