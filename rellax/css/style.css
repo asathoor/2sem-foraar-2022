@@ -1,0 +1,44 @@
+body {
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(93,214,109,1) 0%, rgba(0,204,255,1) 0%, rgba(35,51,180,1) 47%, rgba(113,18,111,1) 100%);
+}
+
+/* skal være MEGET lang */
+#wrap {
+  height: 300vh;
+}
+
+.orange {
+  position: relative;
+  width: 400px;
+  top: 500px;
+  left: 333px;
+  /*background-color: orange;*/
+}
+
+.blaa {
+position: relative;
+  /*background-color: rgba(0,0,255,0.3);*/
+  top: 400px;
+  left: 333px;
+}
+
+.gul{
+  position: relative;
+  top: 500px;
+  left: 333px;
+}
+
+/* størrelse */
+.lille {
+  height: 100px;
+  width: auto;
+}
+.stor{
+  height: 300px;
+  width: auto;
+}
+.medium{
+  height: 150px;
+  width: auto;
+}
