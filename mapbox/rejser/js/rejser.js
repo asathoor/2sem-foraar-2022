@@ -6,21 +6,22 @@ console.log('rejser.js = OK')
 
 // Concerning Token and Style
 // more@ https://docs.mapbox.com/mapbox-gl-js/guides/
-const token = "mapbox://styles/asathoor/cjn7v18hb1px52rppr91osmgm"
-const mapStyle = "mapbox://styles/asathoor/cjn7v18hb1px52rppr91osmgm"
+const token = "pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g"
+const mapStyle = "mapbox://styles/asathoor/cl0ruir7t00lo14qb095q88e6"
 const rejser = "js/rejser.geojson"
 
-
 // Concerning the Map
-mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
+mapboxgl.accessToken = token
 const map = new mapboxgl.Map({
   container: 'map', // container ID
-  style: 'mapbox://styles/mapbox/streets-v11', // style URL
+  style: mapStyle, // style URL
   center: [-50, 56.32], // starting position [lng, lat]
-  zoom: 2.3 // starting zoom
+  zoom: 2.3, // starting zoom
+  pitch: 60,
+  customAttribution: '&copy; Per Thykjær Jensen'
 });
 
-// fetch data
+// fetch data and loop out features
 fetch(rejser).then(
   response => {
     return response.json(); // get JSON data$
@@ -29,14 +30,14 @@ fetch(rejser).then(
   console.log(data); // what's in the JSON string?
 
   // markers
-  for (marker in data.features) {
+  for (let marker in data.features) {
 
     let description = `
       <div>
       <a href="${data.features[marker].properties.url}" target="_blank">
         ${data.features[marker].properties.hvad}
       </a> <br>
-      ${data.features[marker].properties.name} <br>
+      ${data.features[marker].properties.name}
       (${data.features[marker].properties.hvornaar})<br>
       </div>
     `
@@ -51,7 +52,7 @@ fetch(rejser).then(
 
     // Markers
     aMarker = new mapboxgl.Marker({
-        color: 'orange',
+        color: 'purple',
         size: 'large'
       })
       .setLngLat(data.features[marker].geometry.coordinates)
