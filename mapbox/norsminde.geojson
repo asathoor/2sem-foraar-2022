@@ -1,0 +1,172 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          10.266744,
+          56.023594
+        ],
+        "type": "Point"
+      },
+      "id": "0eb660b5416fdaa313e8a98ad5cbaa84"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sti": "fra Maren til Fiskehus"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            10.263756,
+            56.023296
+          ],
+          [
+            10.263853,
+            56.023002
+          ],
+          [
+            10.263714,
+            56.022984
+          ],
+          [
+            10.263585,
+            56.022885
+          ],
+          [
+            10.262592,
+            56.022762
+          ],
+          [
+            10.262448,
+            56.022798
+          ],
+          [
+            10.262308,
+            56.022732
+          ],
+          [
+            10.26234,
+            56.022627
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "339d7f14e16c21aa324927ebde06500a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sted": "Norsminde Bro"
+      },
+      "geometry": {
+        "coordinates": [
+          10.260924,
+          56.02236
+        ],
+        "type": "Point"
+      },
+      "id": "4c9b0264c8d9b39d9dd50cb0f5a6b7ab"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sted": "Fiskehuset",
+        "fiskefilet": 89,
+        "Pommes": 34
+      },
+      "geometry": {
+        "coordinates": [
+          10.262421,
+          56.022651
+        ],
+        "type": "Point"
+      },
+      "id": "547e831106b2b0b9456ca06007e8981a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Kro": "Norsminde Gastro"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              10.261766,
+              56.02207
+            ],
+            [
+              10.262329,
+              56.022327
+            ],
+            [
+              10.262605,
+              56.022088
+            ],
+            [
+              10.262471,
+              56.021948
+            ],
+            [
+              10.262133,
+              56.021816
+            ],
+            [
+              10.261766,
+              56.02207
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5e46eeb4fb0b5ae1922e8a59f96a4011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "parkering": "Gratis parkering"
+      },
+      "geometry": {
+        "coordinates": [
+          10.261696,
+          56.022318
+        ],
+        "type": "Point"
+      },
+      "id": "91be8db8c8415f542fd76eb737de108a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Badning": "Forbudt"
+      },
+      "geometry": {
+        "coordinates": [
+          10.266744,
+          56.023606
+        ],
+        "type": "Point"
+      },
+      "id": "b9a4c9ab7a461c1a79fb171f7b85e5c5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "skib": "Maren MS 59",
+        "loerdagstur": 889
+      },
+      "geometry": {
+        "coordinates": [
+          10.263703,
+          56.023285
+        ],
+        "type": "Point"
+      },
+      "id": "dba97034214d3be05347dff6eff94650"
+    }
+  ],
+  "type": "FeatureCollection"
+}
