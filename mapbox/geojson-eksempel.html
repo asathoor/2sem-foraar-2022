@@ -14,15 +14,12 @@
     }
 
     #map {
-      position: absolute;
+      position: relative;
       width: 100%;
-      height: 500px;
+      height: 400px;
     }
-  </style>
-</head>
 
-<body>
-  <style>
+
     #marker {
       background-image: url('https://freesvg.org/storage/img/thumb/UFO_1.png');
       /*background-color: orange;*/
@@ -33,26 +30,22 @@
       cursor: pointer;
     }
 
-    #kysing {
-      background-image: url('https://freesvg.org/storage/img/thumb/UFO_1.png');
-      background-color: orange;
-      background-size: cover;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+
 
     .mapboxgl-popup {
       max-width: 200px;
     }
   </style>
+</head>
+
+<body>
+
 
   <div id="map"></div>
+  <div id="oplysninger"></div>
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
-    const monument = [-77.0353, 38.8895]
     const norsminde = [10.263600, 56.022082]
 
     const map = new mapboxgl.Map({
@@ -61,14 +54,16 @@
       center: norsminde,
       zoom: 15,
       pitch: 42,
-      bearing: 35
+      bearing: 35,
+      customAttribution: '&copy; Per Thykjaer Jensen, 2022'
     })
+
 
     // create the popup
     const popup = new mapboxgl.Popup({
       offset: 36
     }).setText(
-      'Se her! Fiskestangen ved Norsminde.'
+      'Se her! En vigtig besked.'
     );
 
     // create DOM element for the marker
@@ -81,7 +76,7 @@
       .setPopup(popup) // sets a popup on this marker
       .addTo(map);
 
-    /* geoJSON eksempel */
+    /*** geoJSON eksempel ***/
     function getPage(pageId) {
 
       fetch(pageId).then(
@@ -92,6 +87,28 @@
         console.log(data); // what's in the JSON string?
 
         // create HTML here
+        oplysninger.innerHTML = `
+          <div>
+            <h2> ${data.features[7].properties.skib} </h2>
+            <p>Pris for lørdagsturen: ${data.features[7].properties.loerdagstur},- kr.</p>
+          </div>
+        `
+
+        // Popup
+        popUp = new mapboxgl.Popup({
+            offset: 36
+          })
+          .setText(data.features[7].properties.skib)
+          .addTo(map)
+
+        // tilføj marker
+        const marker1 = new mapboxgl.Marker({
+            color: 'orange',
+            size: 'large'
+          })
+          .setLngLat(data.features[7].geometry.coordinates)
+          .addTo(map)
+          .setPopup(popUp)
 
 
       }).catch(err => {
@@ -100,9 +117,7 @@
       })
     }
 
-    const nors = "norsminde.geojson"
-
-    getPage(nors)
+    getPage("norsminde.geojson")
   </script>
 
 </body>
