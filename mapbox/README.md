@@ -8,3 +8,5 @@
 * `test.html`: Dabbling in ye Darke Artz
 
 ## Towards more systematic data structures
+
+* `points-object.html`: Points with a similar data structure

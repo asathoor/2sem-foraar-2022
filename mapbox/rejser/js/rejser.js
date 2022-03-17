@@ -43,11 +43,11 @@ fetch(rejser).then(
     `
 
     // Popups
-    popUp = new mapboxgl.Popup({
-        offset: 23
-      })
-      .setHTML(description) // HTML yeah!
-      .addTo(map)
+popUp = new mapboxgl.Popup({
+    offset: 23
+  })
+  .setHTML(description) // HTML yeah!
+  .addTo(map)
 
 
     // Markers

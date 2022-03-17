@@ -1,0 +1,90 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "hvad": "Front Trends",
+        "hvornaar": 2017,
+        "name": "Warsaw",
+        "url": "https://2017.front-trends.com/venue/"
+      },
+      "geometry": {
+        "coordinates": [
+          20.961995,
+          52.224503
+        ],
+        "type": "Point"
+      },
+      "id": "217585aac2a87bf6d0ad99e517b404d2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hvad": "Ansat som lektor",
+        "hvornaar": "1999-2012 og 2014 - nu",
+        "name": "Erhvervsakademi Aarhus",
+        "url": "http://eaaa.dk"
+      },
+      "geometry": {
+        "coordinates": [
+          10.149883,
+          56.117181
+        ],
+        "type": "Point"
+      },
+      "id": "835a2a05ea5f7c51a0b7699c6911eec5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hvad": "JsConf Reykjavik",
+        "hvornaar": "Marts 2018",
+        "name": "Harpa",
+        "url": "https://2018.jsconf.is/"
+      },
+      "geometry": {
+        "coordinates": [
+          -21.932216,
+          64.150119
+        ],
+        "type": "Point"
+      },
+      "id": "adecb2c376a8ebeee22ea5cdb86eab11"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hvornaar": 2016,
+        "hvad": "Visiting Scholar",
+        "name": "University of Regina",
+        "url": "https://www.uregina.ca/apply-now/"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.59031,
+          50.418001
+        ],
+        "type": "Point"
+      },
+      "id": "bd3e8138a2227230f8cdd95204ddf69b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "hvad": "Adobe Summit",
+        "hvornaar": 2014,
+        "name": "Excel, London",
+        "url": "https://www.gsb.stanford.edu/sites/gsb/files/conf-presentations/adobesummit.pdf"
+      },
+      "geometry": {
+        "coordinates": [
+          0.028187,
+          51.50803
+        ],
+        "type": "Point"
+      },
+      "id": "f75c1c1a7bb6daee2af21c7921a15d3c"
+    }
+  ],
+  "type": "FeatureCollection"
+}

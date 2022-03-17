@@ -1,0 +1,39 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "billede": "images/malling.jpg",
+        "overskrift": "Malling og Ajstrup stramnd",
+        "url": "https://da.wikipedia.org/wiki/Malling",
+        "tekst": "Her er Malling lisson"
+      },
+      "geometry": {
+        "coordinates": [
+          10.267666,
+          56.050531
+        ],
+        "type": "Point"
+      },
+      "id": "aba4571d397adc53e4ccf22099c609ed"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "overskrift": "Aros",
+        "billede": "images/aarhus.jpg",
+        "url": "https://www.moesgaardmuseum.dk/",
+        "tekst": "Tangkrogen ved Aarhus"
+      },
+      "geometry": {
+        "coordinates": [
+          10.209462,
+          56.13571
+        ],
+        "type": "Point"
+      },
+      "id": "e0d505213311721341943010bee9dd86"
+    }
+  ],
+  "type": "FeatureCollection"
+}
