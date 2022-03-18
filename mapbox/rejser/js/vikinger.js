@@ -11,10 +11,11 @@ mapboxgl.accessToken = token
 const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: mapStyle, // style URL
-  center: [10.2701, 56.1347], // starting position [lng, lat]
+  center: [10.30, 56.1347], // starting position [lng, lat]
   zoom: 11, // starting zoom
-  pitch: 60,
-  customAttribution: '&copy; Grevinde Danner'
+  pitch: 70,
+  bearing: 139,
+  customAttribution: '&copy; Jarl Regnar Lodbrog'
 });
 
 // begynd fetch() her
